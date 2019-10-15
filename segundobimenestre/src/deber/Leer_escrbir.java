@@ -61,8 +61,30 @@ public class Leer_escrbir {
         return lista;
     }
 
+    public futbolista verificador_edad(List<futbolista> listafutbolista) {
+        futbolista menor = listafutbolista.get(0);
+        for (futbolista futbolista : listafutbolista) {
+            if (menor.getAños() > menor.getAños()) {
+                menor = futbolista;
+            }
+        }
+        return menor;
+
+    }
+public futbolista titulos(List<futbolista> listafutbolista) {
+        futbolista goles = listafutbolista.get(0);
+        for (futbolista futbolista : listafutbolista) {
+//            if (goles.getEquipo() <= goles.getNumero()) {
+//                goles = futbolista;
+//            } else {
+//            }
+        }
+        return goles;
+
+    }
     public static void main(String[] args) {
 
+        
         Leer_escrbir objeto = new Leer_escrbir();
         futbolista objeto1 = new futbolista(10, "Delantero", 25, "derecha", "Alexander", new equipo("primera divicion", 63, 100, 5, "Sporting Cristal"));
         futbolista objeto2 = new futbolista(9, "Latera Derecho", 30, "derecha", "Hernan", new equipo("Segunda vicion", 45, 220, 0, "Juventus"));
@@ -92,5 +114,6 @@ public class Leer_escrbir {
         for (futbolista futbolista : lista) {
             System.out.println(futbolista.getNombre());
         }
+        System.out.println(objeto.verificador_edad(lista1));
     }
 }
